@@ -1,0 +1,3 @@
+api_base: __API_BASE_URL__
+api_key: __API_KEY__
+model: __MODEL__
