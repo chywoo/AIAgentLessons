@@ -36,6 +36,7 @@ class MemoryAgent:
         state = AgentState(prompt)
 
         memories = self._retrieve_memories(prompt)
+        print(f"[AGENT] Retrieved memory: {memories}")
         state.retrieved_memories.append(memories)
 
         state.plan = self._create_plan(state.goal)
@@ -103,8 +104,10 @@ class MemoryAgent:
                     "Break the user's goal into a small number of "
                     "clear executable steps. "
                     "Do not perform the task yourself. "
+                    "Only make clear executable steps. "
                     "Return JSON only in this format:\n"
-                    '{"steps": ["step 1", "step 2"]}'
+                    '{"steps": ["step 1", "step 2", ]} '
+                    "DO NOT ANSWER TOOL CALLING. "
                 ),
             },
             {
@@ -113,7 +116,7 @@ class MemoryAgent:
             }
         ]
 
-        response = self.__call_llm(messages)
+        response = self.__call_llm(messages, TOOL_SCHEMAS)
         message = response.choices[0].message
         content = message.content or ""
 
