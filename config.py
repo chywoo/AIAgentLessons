@@ -27,6 +27,7 @@ class AgentConfig:
         self.api_base: str = data.get("api_base", "http://gx10:8000/v1")
         self.api_key: str = data.get("api_key", "dummy")
         self.model: str = data.get("model", "gpt-oss-120b")
+        self.vector_db: str = data.get("vector_db", "http://localhost:6333")
         # Tools schema name is constant for this project.
         self.tools: str = "TOOL_SCHEMAS"
 
