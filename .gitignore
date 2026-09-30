@@ -235,4 +235,4 @@ config.yaml
 data/
 training_data/*.txt
 checkpoints/
-
+*.db

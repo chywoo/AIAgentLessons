@@ -429,11 +429,18 @@ Step result:
     # ---------------------------------------------------------
     # Call LLM with messages or a tool schema
     # ---------------------------------------------------------
-    def __call_llm(self, messages: object, tools=None) -> ChatCompletion:
+    def __call_llm(self, messages, tools=None):
+        params = {
+            "model": self.model,
+            "messages": messages,
+            "reasoning_effort": "none",  # gpt-6-luna must be set to "none" for tool calling
+        }
 
-        return self.client.chat.completions.create(
-            model=self.model, messages=messages, tools=tools, tool_choice="auto"
-        )
+        if tools:
+            params["tools"] = tools
+            params["tool_choice"] = "auto"
+
+        return self.client.chat.completions.create(**params)
 
     # ---------------------------------------------------------
     # Parse planner JSON response
