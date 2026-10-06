@@ -1,0 +1,26 @@
+{
+  "trace_id": "ff8a484a-98d1-4d14-b330-5c0ffe373edc",
+  "task": "\n    Read 'sales.txt'.\n\nFind the 2025 annual sales.\n\nCalculate 10% of that value.\n\nThen tell me how many characters\nare in the calculated result.\n    ",
+  "start_time": 1791270584.354232,
+  "end_time": 1791270589.464374,
+  "duration_ms": 5110.14199256897,
+  "spans": [
+    {
+      "name": "chat_completion",
+      "span_type": "llm",
+      "start_time": 39168.79138475,
+      "end_time": 39173.901407211,
+      "duration_ms": 5110.022460998152,
+      "attributes": {
+        "model": "gpt-6-luna",
+        "step": 1,
+        "prompt_tokens": 269,
+        "completion_tokens": 18,
+        "total_tokens": 287
+      }
+    }
+  ],
+  "final_answer": null,
+  "success": false,
+  "error": "name 'arguments' is not defined"
+}

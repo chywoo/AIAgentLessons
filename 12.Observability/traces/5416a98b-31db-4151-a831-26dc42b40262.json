@@ -1,0 +1,52 @@
+{
+  "trace_id": "5416a98b-31db-4151-a831-26dc42b40262",
+  "task": "What is 123 * 456?",
+  "start_time": 1791271780.754099,
+  "end_time": 1791271784.061665,
+  "duration_ms": 3307.5661659240723,
+  "spans": [
+    {
+      "name": "chat_completion",
+      "span_type": "llm",
+      "start_time": 40365.18435766,
+      "end_time": 40367.028649652,
+      "duration_ms": 1844.291991998034,
+      "attributes": {
+        "model": "gpt-6-luna",
+        "step": 1,
+        "prompt_tokens": 240,
+        "completion_tokens": 19,
+        "total_tokens": 259
+      }
+    },
+    {
+      "name": "calculator",
+      "span_type": "tool",
+      "start_time": 40367.028711517,
+      "end_time": 40367.028818752,
+      "duration_ms": 0.1072349987225607,
+      "attributes": {
+        "arguments": "{\"expression\":\"123*456\"}",
+        "result": "56088",
+        "success": true
+      }
+    },
+    {
+      "name": "chat_completion",
+      "span_type": "llm",
+      "start_time": 40367.02886371,
+      "end_time": 40368.491872523,
+      "duration_ms": 1463.0088129997603,
+      "attributes": {
+        "model": "gpt-6-luna",
+        "step": 2,
+        "prompt_tokens": 271,
+        "completion_tokens": 13,
+        "total_tokens": 284
+      }
+    }
+  ],
+  "final_answer": "123 × 456 = 56,088.",
+  "success": false,
+  "error": true
+}

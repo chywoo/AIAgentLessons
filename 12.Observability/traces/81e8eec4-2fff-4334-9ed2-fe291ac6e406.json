@@ -1,0 +1,52 @@
+{
+  "trace_id": "81e8eec4-2fff-4334-9ed2-fe291ac6e406",
+  "task": "Read sales.txt and find the 2025 annual sales.",
+  "start_time": 1791272199.696055,
+  "end_time": 1791272206.859763,
+  "duration_ms": 7163.707971572876,
+  "spans": [
+    {
+      "name": "chat_completion",
+      "span_type": "llm",
+      "start_time": 40784.136402471,
+      "end_time": 40788.130203196,
+      "duration_ms": 3993.8007250020746,
+      "attributes": {
+        "model": "gpt-6-luna",
+        "step": 1,
+        "prompt_tokens": 244,
+        "completion_tokens": 18,
+        "total_tokens": 262
+      }
+    },
+    {
+      "name": "read_file",
+      "span_type": "tool",
+      "start_time": 40788.130230874,
+      "end_time": 40788.130556037,
+      "duration_ms": 0.325163004163187,
+      "attributes": {
+        "arguments": "{\"path\":\"sales.txt\"}",
+        "result": "Company Annual Sales Report\n\n2024 annual sales: 920000\n2025 annual sales: 1000000",
+        "success": true
+      }
+    },
+    {
+      "name": "chat_completion",
+      "span_type": "llm",
+      "start_time": 40788.130592698,
+      "end_time": 40791.304649144,
+      "duration_ms": 3174.0564460051246,
+      "attributes": {
+        "model": "gpt-6-luna",
+        "step": 2,
+        "prompt_tokens": 296,
+        "completion_tokens": 15,
+        "total_tokens": 311
+      }
+    }
+  ],
+  "final_answer": "2025 annual sales were 1,000,000.",
+  "success": false,
+  "error": true
+}

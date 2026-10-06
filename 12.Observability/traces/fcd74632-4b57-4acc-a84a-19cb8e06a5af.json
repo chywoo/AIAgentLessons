@@ -1,0 +1,52 @@
+{
+  "trace_id": "fcd74632-4b57-4acc-a84a-19cb8e06a5af",
+  "task": "What is 123 * 456?",
+  "start_time": 1791272191.4921322,
+  "end_time": 1791272199.695405,
+  "duration_ms": 8203.272819519043,
+  "spans": [
+    {
+      "name": "chat_completion",
+      "span_type": "llm",
+      "start_time": 40775.923901515,
+      "end_time": 40778.924412789,
+      "duration_ms": 3000.5112739963806,
+      "attributes": {
+        "model": "gpt-6-luna",
+        "step": 1,
+        "prompt_tokens": 240,
+        "completion_tokens": 20,
+        "total_tokens": 260
+      }
+    },
+    {
+      "name": "calculator",
+      "span_type": "tool",
+      "start_time": 40778.924473781,
+      "end_time": 40778.924570658,
+      "duration_ms": 0.09687699639471248,
+      "attributes": {
+        "arguments": "{\"expression\":\"123 * 456\"}",
+        "result": "56088",
+        "success": true
+      }
+    },
+    {
+      "name": "chat_completion",
+      "span_type": "llm",
+      "start_time": 40778.924615809,
+      "end_time": 40784.135702155,
+      "duration_ms": 5211.086345996591,
+      "attributes": {
+        "model": "gpt-6-luna",
+        "step": 2,
+        "prompt_tokens": 272,
+        "completion_tokens": 6,
+        "total_tokens": 278
+      }
+    }
+  ],
+  "final_answer": "56,088",
+  "success": false,
+  "error": true
+}

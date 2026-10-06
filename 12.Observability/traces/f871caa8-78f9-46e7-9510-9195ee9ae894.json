@@ -1,0 +1,78 @@
+{
+  "trace_id": "f871caa8-78f9-46e7-9510-9195ee9ae894",
+  "task": "Read sales.txt and calculate the increase from 1000000 to 1250000.",
+  "start_time": 1791272206.8602638,
+  "end_time": 1791272216.655676,
+  "duration_ms": 9795.412063598633,
+  "spans": [
+    {
+      "name": "chat_completion",
+      "span_type": "llm",
+      "start_time": 40791.305187825,
+      "end_time": 40794.272883396,
+      "duration_ms": 2967.6955710019683,
+      "attributes": {
+        "model": "gpt-6-luna",
+        "step": 1,
+        "prompt_tokens": 250,
+        "completion_tokens": 18,
+        "total_tokens": 268
+      }
+    },
+    {
+      "name": "read_file",
+      "span_type": "tool",
+      "start_time": 40794.272909486,
+      "end_time": 40794.273217691,
+      "duration_ms": 0.30820500251138583,
+      "attributes": {
+        "arguments": "{\"path\":\"sales.txt\"}",
+        "result": "Company Annual Sales Report\n\n2024 annual sales: 920000\n2025 annual sales: 1000000",
+        "success": true
+      }
+    },
+    {
+      "name": "chat_completion",
+      "span_type": "llm",
+      "start_time": 40794.27325353,
+      "end_time": 40797.344904656,
+      "duration_ms": 3071.6511259961408,
+      "attributes": {
+        "model": "gpt-6-luna",
+        "step": 2,
+        "prompt_tokens": 302,
+        "completion_tokens": 23,
+        "total_tokens": 325
+      }
+    },
+    {
+      "name": "calculator",
+      "span_type": "tool",
+      "start_time": 40797.344929075,
+      "end_time": 40797.345002289,
+      "duration_ms": 0.0732140033505857,
+      "attributes": {
+        "arguments": "{\"expression\":\"1250000-1000000\"}",
+        "result": "250000",
+        "success": true
+      }
+    },
+    {
+      "name": "chat_completion",
+      "span_type": "llm",
+      "start_time": 40797.345045674,
+      "end_time": 40801.104469409,
+      "duration_ms": 3759.4237349985633,
+      "attributes": {
+        "model": "gpt-6-luna",
+        "step": 3,
+        "prompt_tokens": 337,
+        "completion_tokens": 25,
+        "total_tokens": 362
+      }
+    }
+  ],
+  "final_answer": "The increase from 1,000,000 to 1,250,000 is 250,000.",
+  "success": false,
+  "error": true
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "calc_001",
+    "input": "What is 123 * 456?",
+    "expected_tools": [
+      "calculator"
+    ],
+    "expected_answer_contains": [
+      "56088"
+    ]
+  },
+  {
+    "id": "sales_001",
+    "input": "Read sales.txt and find the 2025 annual sales.",
+    "expected_tools": [
+      "read_file"
+    ],
+    "expected_answer_contains": [
+      "1000000"
+    ]
+  },
+  {
+    "id": "sales_growth_001",
+    "input": "Read sales.txt and calculate the increase from 1000000 to 1250000.",
+    "expected_tools": [
+      "read_file",
+      "calculator"
+    ],
+    "expected_answer_contains": [
+      "25"
+    ]
+  }
+]
