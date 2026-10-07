@@ -17,5 +17,6 @@ dependencies = [
     "scikit-learn==1.4.2",
     "mcp>=2.3.0",
     "asyncio>=4.0.0",
+    "langgraph>=1.2.14",
 ]
 
