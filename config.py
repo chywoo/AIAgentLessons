@@ -30,4 +30,5 @@ class AgentConfig:
         self.vector_db: str = data.get("vector_db", "http://localhost:6333")
         # Tools schema name is constant for this project.
         self.tools: str = "TOOL_SCHEMAS"
+        self.reasoning_effort: str = data.get("reasoning_effort", "medium")
 
