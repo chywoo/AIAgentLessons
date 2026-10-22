@@ -73,3 +73,7 @@ The agent is configured via `00.simple-agent/config.py`:
 ## License
 
 MIT
+
+## 한국어 복습·교육·개발 참고서
+
+[생성된 학습 자료 모음](docs/generated/README.md)에서 Markdown·인터랙티브 HTML 복습집, 교육 PPTX, 실습 ZIP, AI Agent 개발 Reference Book을 다운로드할 수 있습니다.
